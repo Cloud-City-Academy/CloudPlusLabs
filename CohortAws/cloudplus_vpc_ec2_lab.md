@@ -99,6 +99,7 @@ By the end of this lab, you will:
    - Subnet: `Public-<your-name>-Subnet`
    - Auto-assign Public IP: Enabled
    - Security Group: `WebAccess-SG`
+   - DONT FORGET TO ENABLE Ip Auto addressing and don't use the default VPC (Use the one you made by clicking edit)
 3. Click **Launch Instance**
 
 ---
