@@ -53,7 +53,7 @@ By the end of this lab, you will:
 ## 🌐 Part 4: Create Route Table and Add Route
 
 1. Go to **Route Tables** > **Create route table**
-   - Name: `Public-RT`
+   - Name: `Public-<your-name>-RT`
    - VPC: `CloudPlus-<your-name>-VPC`
 2. Select your new Route Table
    - **Actions** > **Edit routes** > **Add route**:
