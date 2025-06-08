@@ -92,7 +92,7 @@ By the end of this lab, you will:
 1. Go to **EC2 Dashboard** > **Launch Instance**
 2. Configure:
    - Name: `CloudPlus-<your-name>-WebServer`
-   - AMI: Amazon Linux 2023 (Free Tier)
+   - AMI: Ubuntu 22.04 or latest (Free Tier)
    - Instance Type: `t2.micro`
    - Key Pair: `cloudplus-key`
    - Network: `CloudPlus-<your-name>-VPC`
@@ -122,7 +122,7 @@ By the end of this lab, you will:
 2. In your terminal:
    ```bash
    chmod 400 cloudplus-key.pem
-   ssh -i cloudplus-key.pem ec2-user@<your-public-ip>
+   ssh -i cloudplus-key.pem ubuntu@<your-public-ip>
    ```
    (Use `ec2-user` for Amazon Linux)
 
@@ -133,10 +133,11 @@ By the end of this lab, you will:
 1. SSH into the instance
 2. Install Apache:
    ```bash
-   sudo yum install httpd -y
-   sudo systemctl start httpd
-   sudo systemctl enable httpd
-   echo "<h1>Hello from CloudPlus!</h1>" | sudo tee /var/www/html/index.html
+   sudo apt update
+   sudo apt install apache2 -y
+   echo "<h1>Hello from CloudPlus on Ubuntu!</h1>" | sudo tee /var/www/html/index.html
+   sudo systemctl start apache2
+   sudo systemctl enable apache2
    ```
 3. Visit `http://<your-public-ip>` in your browser — you should see your message.
 
