@@ -34,7 +34,7 @@ By the end of this lab, you will:
 
 1. Go to **Subnets** > **Create Subnet**
 2. Set:
-   - **Name**: `Public-Subnet`
+   - **Name**: `Public-<your-name>-Subnet`
    - **VPC**: `CloudPlus-<your-name>-VPC`
    - **Availability Zone**: (Pick any)
    - **CIDR Block**: `10.0.1.0/24`
@@ -46,7 +46,7 @@ By the end of this lab, you will:
 
 1. Go to **Internet Gateways** > **Create internet gateway**
    - Name: `CloudPlus-<your-name>-IGW`
-2. Click **Attach to VPC** > Select `CloudPlus-VPC`
+2. Click **Attach to VPC** > Select `CloudPlus-<your-name>-VPC`
 
 ---
 
@@ -58,9 +58,9 @@ By the end of this lab, you will:
 2. Select your new Route Table
    - **Actions** > **Edit routes** > **Add route**:
      - **Destination**: `0.0.0.0/0`
-     - **Target**: `Internet Gateway` > `CloudPlus-IGW`
+     - **Target**: `Internet Gateway` > `CloudPlus-<your-name>-IGW`
 3. Go to **Subnet associations** > **Edit subnet associations**
-   - Check `Public-Subnet`
+   - Check `Public-<your-name>-Subnet`
    - Save
 
 ---
@@ -68,7 +68,7 @@ By the end of this lab, you will:
 ## 🔐 Part 5: Create a Security Group
 
 1. Go to **Security Groups** > **Create Security Group**
-   - Name: `WebAccess-SG`
+   - Name: `WebAccess-<your-name>-SG`
    - VPC: `CloudPlus-<your-name>-VPC`
 2. Inbound Rules:
    - **SSH** (22) > My IP
@@ -95,8 +95,8 @@ By the end of this lab, you will:
    - AMI: Amazon Linux 2023 (Free Tier)
    - Instance Type: `t2.micro`
    - Key Pair: `cloudplus-key`
-   - Network: `CloudPlus-VPC`
-   - Subnet: `Public-Subnet`
+   - Network: `CloudPlus-<your-name>-VPC`
+   - Subnet: `Public-<your-name>-Subnet`
    - Auto-assign Public IP: Enabled
    - Security Group: `WebAccess-SG`
 3. Click **Launch Instance**
