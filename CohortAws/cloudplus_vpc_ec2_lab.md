@@ -23,7 +23,7 @@ By the end of this lab, you will:
 1. Go to **VPC Dashboard** > **Your VPCs** > **Create VPC**
 2. Choose **VPC only**
 3. Set:
-   - **Name**: `CloudPlus-VPC`
+   - **Name**: `CloudPlus-<your-name>-VPC`
    - **IPv4 CIDR block**: `10.0.0.0/16`
    - Leave other settings default
 4. Click **Create VPC**
