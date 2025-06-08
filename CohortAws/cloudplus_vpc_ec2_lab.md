@@ -102,8 +102,21 @@ By the end of this lab, you will:
 3. Click **Launch Instance**
 
 ---
+## 🧩 Part 8: Use EC2 Instance Connect (AWS Console)
 
-## 🧩 Part 8: SSH into Your Instance
+1. Go to EC2 Dashboard > Instances
+
+2. Select your instance
+
+3. Click Connect
+
+4. Choose the EC2 Instance Connect tab
+
+5. Click Connect again to launch a browser-based SSH session
+
+✅ No need to upload your .pem key — Instance Connect uses temporary public keys.
+
+## 💻 Option 2: SSH into Your Instance
 
 1. Get the **public IP** from the EC2 instance details
 2. In your terminal:
