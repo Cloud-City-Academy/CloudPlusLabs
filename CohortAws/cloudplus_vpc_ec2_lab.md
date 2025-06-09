@@ -18,8 +18,6 @@ By the end of this lab, you will:
 
 ---
 
----
-
 ## If you dont have an AWS account (Register for AWS Free Tier)
 
 Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazon-web-services-aws-free-tier-account-set-up/](https://www.geeksforgeeks.org/amazon-web-services-aws-free-tier-account-set-up/)
