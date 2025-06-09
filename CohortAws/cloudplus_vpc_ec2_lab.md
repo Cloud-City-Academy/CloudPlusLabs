@@ -18,6 +18,25 @@ By the end of this lab, you will:
 
 ---
 
+---
+
+## If you dont have an AWS account (Register for AWS Free Tier)
+
+Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazon-web-services-aws-free-tier-account-set-up/](https://www.geeksforgeeks.org/amazon-web-services-aws-free-tier-account-set-up/)
+
+1. Go to [https://aws.amazon.com/free](https://aws.amazon.com/free)
+2. Click **Create a Free Account**
+3. Follow the signup instructions:
+   - Email and password
+   - Billing info (credit/debit card)
+   - Identity verification
+   - **Select the Free Basic Support Plan**
+4. Log in to [https://console.aws.amazon.com](https://console.aws.amazon.com)
+
+✅ **Checkpoint**: You should now be on the AWS Management Console.
+
+---
+
 ## 📘 Part 1: Create a Custom VPC
 
 1. Go to **VPC Dashboard** > **Your VPCs** > **Create VPC**
