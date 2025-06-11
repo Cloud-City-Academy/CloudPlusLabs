@@ -161,13 +161,12 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 
 ---
 
-## 🧹 Part 10: Clean Up (before 11 PM EST)
+## 🧹 Part 10: Clean Up 
 - Terminate EC2 instance
-- Delete VPC and associated resources if needed (otherwise, they will be wiped automatically)
+- Delete VPC and associated resources that were created throughotu the lab.
 
 ---
 
 ## ℹ️ Notes:
 - Default VPC should **not be used** for this lab.
-- Students have Free Tier permissions; larger instances or NAT Gateways will fail.
-- Resources are deleted **nightly at 11 PM EST**, so save screenshots if needed.
+- Default Subnet should **not be used** for this lab.
