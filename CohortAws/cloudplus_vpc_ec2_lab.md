@@ -40,7 +40,7 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 1. Go to **VPC Dashboard** > **Your VPCs** > **Create VPC**
 2. Choose **VPC only**
 3. Set:
-   - **Name**: `CloudPlus-<your-name>-VPC`
+   - **Name**: `CloudPlus-VPC`
    - **IPv4 CIDR block**: `10.0.0.0/16`
    - Leave other settings default
 4. Click **Create VPC**
@@ -51,8 +51,8 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 
 1. Go to **Subnets** > **Create Subnet**
 2. Set:
-   - **Name**: `Public-<your-name>-Subnet`
-   - **VPC**: `CloudPlus-<your-name>-VPC`
+   - **Name**: `Public-Subnet`
+   - **VPC**: `CloudPlus-VPC`
    - **Availability Zone**: (Pick any)
    - **CIDR Block**: `10.0.1.0/24`
 3. Click **Create Subnet**
@@ -62,22 +62,22 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 ## 🔌 Part 3: Attach Internet Gateway
 
 1. Go to **Internet Gateways** > **Create internet gateway**
-   - Name: `CloudPlus-<your-name>-IGW`
-2. Click **Attach to VPC** > Select `CloudPlus-<your-name>-VPC`
+   - Name: `CloudPlus-IGW`
+2. Click **Attach to VPC** > Select `CloudPlus-VPC`
 
 ---
 
 ## 🌐 Part 4: Create Route Table and Add Route
 
 1. Go to **Route Tables** > **Create route table**
-   - Name: `Public-<your-name>-RT`
-   - VPC: `CloudPlus-<your-name>-VPC`
+   - Name: `Public-RT`
+   - VPC: `CloudPlus-VPC`
 2. Select your new Route Table
    - **Actions** > **Edit routes** > **Add route**:
      - **Destination**: `0.0.0.0/0`
-     - **Target**: `Internet Gateway` > `CloudPlus-<your-name>-IGW`
+     - **Target**: `Internet Gateway` > `CloudPlus-IGW`
 3. Go to **Subnet associations** > **Edit subnet associations**
-   - Check `Public-<your-name>-Subnet`
+   - Check `Public-Subnet`
    - Save
 
 ---
@@ -85,8 +85,8 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 ## 🔐 Part 5: Create a Security Group
 
 1. Go to **Security Groups** > **Create Security Group**
-   - Name: `WebAccess-<your-name>-SG`
-   - VPC: `CloudPlus-<your-name>-VPC`
+   - Name: `WebAccess-SG`
+   - VPC: `CloudPlus-VPC`
 2. Inbound Rules:
    - **SSH** (22) > My IP
    - **HTTP** (80) > Anywhere (0.0.0.0/0)
@@ -98,7 +98,7 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 ## 🗝️ Part 6: Create a Key Pair
 
 1. Go to **EC2 Dashboard** > **Key Pairs** > **Create Key Pair**
-   - Name: `cloudplus-<your-name>-key`
+   - Name: `cloudplus-key`
    - File format: `.pem`
    - Download and **save the file securely**
 
@@ -108,12 +108,12 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 
 1. Go to **EC2 Dashboard** > **Launch Instance**
 2. Configure:
-   - Name: `CloudPlus-<your-name>-WebServer`
+   - Name: `CloudPlus-WebServer`
    - AMI: Ubuntu 22.04 or latest (Free Tier)
    - Instance Type: `t2.micro`
    - Key Pair: `cloudplus-key`
-   - Network: `CloudPlus-<your-name>-VPC`
-   - Subnet: `Public-<your-name>-Subnet`
+   - Network: `CloudPlus-VPC`
+   - Subnet: `Public-Subnet`
    - Auto-assign Public IP: Enabled
    - Security Group: `WebAccess-SG`
    - DONT FORGET TO ENABLE Ip Auto addressing and don't use the default VPC (Use the one you made by clicking edit)
@@ -153,7 +153,6 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
    ```bash
    sudo apt update
    sudo apt install apache2 -y
-   echo "<h1>Hello from CloudPlus on Ubuntu!</h1>" | sudo tee /var/www/html/index.html
    sudo systemctl start apache2
    sudo systemctl enable apache2
    ```
