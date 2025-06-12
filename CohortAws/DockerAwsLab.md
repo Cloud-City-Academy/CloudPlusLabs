@@ -91,7 +91,7 @@ create templates/index.html
 <body>
     <h1>🚀 Hello from Flask on Ubuntu in Docker!</h1>
     <p>This is running inside a Docker container on your EC2 instance.</p>
-    <img src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif" alt="Tech GIF">
+    <img src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif](https://giphy.com/gifs/computer-computing-retro-fC4eVInYkUAR0a5hpK" alt="Tech GIF">
 </body>
 </html>
 ```
