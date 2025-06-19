@@ -109,7 +109,7 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 1. Go to **EC2 Dashboard** > **Launch Instance**
 2. Configure:
    - Name: `CloudPlus-WebServer`
-   - AMI: Ubuntu 22.04 or latest (Free Tier)
+   - AMI: Ubuntu 22.04 (Free Tier)
    - Instance Type: `t2.micro`
    - Key Pair: `cloudplus-key`
    - Network: `CloudPlus-VPC`
