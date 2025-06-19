@@ -135,7 +135,7 @@ Can use this as reference on how to signup: [https://www.geeksforgeeks.org/amazo
 ✅ No need to upload your .pem key — Instance Connect uses temporary public keys.
 
 ## 💻 Option 2: SSH into Your Instance
-
+(Install https://git-scm.com/downloads/win for windows, set it up and utilize git bash)
 1. Get the **public IP** from the EC2 instance details
 2. In your terminal:
    ```bash
